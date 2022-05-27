@@ -2,8 +2,5 @@ numpy
 matplotlib
 streamlit
 scipy
-hvplot
-bokeh
-holoviews
 scikit-learn
 protobuf~=3.19.0
