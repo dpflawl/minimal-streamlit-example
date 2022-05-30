@@ -10,9 +10,6 @@ camera = cv2.VideoCapture(0)
 
 count = 0
 while run:
-    count += 1
-    if count == 91:
-        break
     _, frame = camera.read()
     if frame is not None: 
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
