@@ -9,6 +9,7 @@ FRAME_WINDOW = st.image([])
 camera = cv2.VideoCapture(cv2.CAP_V4L2)
 
 count = 0
+st.write(camera.isOpened())
 if camera.isOpened():
     while run:
         _, frame = camera.read()
