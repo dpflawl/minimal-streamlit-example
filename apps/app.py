@@ -1,7 +1,7 @@
 import cv2
 import streamlit as st
 
-st.title("Webcam Live Feed")
+st.title("얼굴 영상을 이용하여 심박수 측정")
 run = st.checkbox('Run')
 FRAME_WINDOW = st.image([])
 camera = cv2.VideoCapture(0)
