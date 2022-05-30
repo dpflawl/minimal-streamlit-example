@@ -2,7 +2,7 @@ import cv2
 import streamlit as st
 
 st.title("얼굴로부터 심박수를 추정하는 심박 모니터링 서비스 Demo 📷💓")
-st.write("👩‍💻 개발자: 지예림") 
+st.write("👩‍💻 개발자 지예림") 
 run = st.checkbox('모니터링 시작')
 FRAME_WINDOW = st.image([])
 camera = cv2.VideoCapture(0)
