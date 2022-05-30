@@ -2,6 +2,7 @@ numpy
 matplotlib
 streamlit
 streamlit_webrtc
+streamlit-webcam-example
 scipy
 scikit-learn
 opencv-python-headless
