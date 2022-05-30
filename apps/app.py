@@ -15,7 +15,7 @@ while run:
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         FRAME_WINDOW.image(frame)
     else:
-        st.write("empty frame")
+        st.write(' ')
     count += 1
     if count == 91:
         break
