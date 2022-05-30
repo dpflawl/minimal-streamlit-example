@@ -14,10 +14,11 @@ while run:
     if count == 91:
         break
     _, frame = camera.read()
-    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    FRAME_WINDOW.image(frame)
-else:
-    st.write(' ') #st.write('모니터링 중지')
+    if frame is not None: 
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        FRAME_WINDOW.image(frame)
+     else:
+        st.write("empty frame")
 
 #loaded_model = joblib.load("/app/minimal-streamlit-example/apps/PhysNet_v5.pkl")
 loaded_model = torch.load('/app/minimal-streamlit-example/apps/model_90.pt', encoding='ascii')
