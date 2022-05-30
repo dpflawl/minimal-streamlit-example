@@ -15,4 +15,4 @@ else:
     st.write(' ') #st.write('모니터링 중지')
 
 #머신러닝으로 저장된 모델을 호출하고 st로 부터 받은 값으로 예측한다.
-#loaded_model = joblib.load("/app/minimal-streamlit-example/apps/regression_model.pkl")
+loaded_model = joblib.load("/app/minimal-streamlit-example/apps/model_90.pt")
