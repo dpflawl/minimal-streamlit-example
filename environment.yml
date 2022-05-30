@@ -27,9 +27,9 @@ dependencies:
 - pip:
   - streamlit
   - streamlit-webcam-example
-  - streamlit-webrtc==0.6.3
+  - streamlit-webrtc
   - opencv-python-headless
-  - aiortc==1.0.0
+  - aiortc
   - scikit-learn==1.0.2
   - sklearn==0.0
   - tensorflow==2.8.0
