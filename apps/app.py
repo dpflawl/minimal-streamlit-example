@@ -8,7 +8,11 @@ run = st.checkbox('모니터링 시작')
 FRAME_WINDOW = st.image([])
 camera = cv2.VideoCapture(0)
 
+count = 0
 while run:
+    count += 1
+    if count == 91:
+        break
     _, frame = camera.read()
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
     FRAME_WINDOW.image(frame)
