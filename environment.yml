@@ -26,6 +26,7 @@ dependencies:
 - pickle5==0.0.12
 - pip:
   - streamlit
+  - streamlit-webcam-example
   - streamlit_webrtc
   - opencv-python-headless
   - scikit-learn==1.0.2
