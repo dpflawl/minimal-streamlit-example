@@ -6,7 +6,7 @@ st.title("얼굴로부터 심박수를 추정하는 심박 모니터링 서비�
 st.write("👩‍💻 Developed by 지예림") 
 run = st.checkbox('모니터링 시작')
 FRAME_WINDOW = st.image([])
-camera = cv2.VideoCapture(0)
+camera = cv2.VideoCapture(CAP_V4L2)
 
 count = 0
 while run:
