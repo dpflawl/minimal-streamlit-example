@@ -1,6 +1,7 @@
 numpy
 matplotlib
 streamlit
+streamlit_webrtc
 scipy
 scikit-learn
 opencv-python-headless
