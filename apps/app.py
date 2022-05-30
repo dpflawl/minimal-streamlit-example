@@ -14,7 +14,7 @@ while run:
     if frame is not None: 
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         FRAME_WINDOW.image(frame)
-     else:
+    else:
         st.write("empty frame")
 
 #loaded_model = joblib.load("/app/minimal-streamlit-example/apps/PhysNet_v5.pkl")
