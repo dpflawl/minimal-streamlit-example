@@ -3,5 +3,5 @@ matplotlib
 streamlit
 scipy
 scikit-learn
-opencv-python
+opencv-python-headless
 protobuf~=3.19.0
