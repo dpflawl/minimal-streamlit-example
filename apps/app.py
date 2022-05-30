@@ -16,6 +16,11 @@ while run:
         FRAME_WINDOW.image(frame)
     else:
         st.write("empty frame")
-
+    count += 1
+    if count == 91:
+        break
+else:
+    st.write(' ') #st.write('모니터링 중지')
+        
 #loaded_model = joblib.load("/app/minimal-streamlit-example/apps/PhysNet_v5.pkl")
 loaded_model = torch.load('/app/minimal-streamlit-example/apps/model_90.pt', encoding='ascii')
