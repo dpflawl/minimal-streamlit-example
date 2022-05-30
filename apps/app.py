@@ -4,6 +4,7 @@ import streamlit as st
 #AI모델을 불러오기 위한 joblib 불러오기
 import joblib
 import pandas as pd
+import os
 
 # st를 이용하여 타이틀과 입력 방법을 명시한다.
 
@@ -14,7 +15,8 @@ values = st.slider('평균속도 입력하세요', 0, 200)  # st.number_input("�
 st.write('평균속도:', values)
 
 #머신러닝으로 저장된 모델을 호출하고 st로 부터 받은 값으로 예측한다.
-loaded_model = joblib.load("./regression_model.pkl")
+print(os.getcwd())
+loaded_model = joblib.load("regression_model.pkl")
 new_x = [values]
 df_new_x = pd.DataFrame(new_x)
 new_y = loaded_model.predict(df_new_x )
