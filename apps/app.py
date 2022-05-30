@@ -1,7 +1,7 @@
 import cv2
 import streamlit as st
 
-st.title("얼굴 영상을 이용하여 심박수를 측정합니다.")
+st.title("얼굴 영상을 이용하여 심박수 측정 ❤")
 run = st.checkbox('심박 모니터링 시작')
 FRAME_WINDOW = st.image([])
 camera = cv2.VideoCapture(0)
