@@ -10,7 +10,7 @@ import torch
 st.title("얼굴로부터 심박수를 추정하는 심박 모니터링 서비스 Demo 📷💓")
 st.write("👩‍💻 Developed by 지예림") 
 
-for i in range(0, 5):
+for i in range(0, 50):
     cap = cv2.VideoCapture(i)
     is_camera = cap.isOpened()
     if is_camera:
