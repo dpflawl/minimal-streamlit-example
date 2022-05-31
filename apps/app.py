@@ -15,6 +15,7 @@ def igen_frames():
 
 frames = []
 for i in range(0, 50):
+    igen_frames()
     ret, frame = cap.read()
     frames.append(frame)
 
