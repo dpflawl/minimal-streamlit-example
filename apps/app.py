@@ -18,7 +18,7 @@ def get_cap():
 
 cap = get_cap()
 
-FRAME_WINDOW = st.image([])
+FRAME_WINDOW = st.empty()
 
 while run:
     ret, frame = cap.read()      
