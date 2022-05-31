@@ -10,23 +10,9 @@ import torch
 st.title("얼굴로부터 심박수를 추정하는 심박 모니터링 서비스 Demo 📷💓")
 st.write("👩‍💻 Developed by 지예림") 
 
-run = st.checkbox('모니터링 시작')
-
-@st.cache(allow_output_mutation=True)
-def get_cap():
-    return cv2.VideoCapture(0)
-
-cap = get_cap()
-
-FRAME_WINDOW = st.empty()
-
-while run:
-    ret, frame = cap.read()      
-    if ret:
-        cap.release()
-        break
-        
-    FRAME_WINDOW.image(frame)
+img_file = st.camera_input("Webcam image")
+if img_file is not None:
+    st.image(img_file)
 
 #loaded_model = joblib.load("/app/minimal-streamlit-example/apps/PhysNet_v5.pkl")
 loaded_model = torch.load('/app/minimal-streamlit-example/apps/model_90.pt', encoding='ascii')
