@@ -6,8 +6,7 @@ streamlit_webrtc==0.37.0
 streamlit-webcam-example
 scipy
 scikit-learn
-opencv-python-headless==4.5.5.64
-opencv_contrib_python==4.1.1.26
+opencv-python-headless
 torch
 pydub==0.25.1
 typing_extensions==4.1.1
