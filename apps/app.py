@@ -13,11 +13,12 @@ st.write("👩‍💻 Developed by 지예림")
 def igen_frames():
     cap = cv2.VideoCapture(cv2.CAP_V4L2) #resolved, correct position
 
-frames = []
-for i in range(0, 50):
-    igen_frames()
-    ret, frame = cap.read()
-    frames.append(frame)
+    frames = []
+    for i in range(0, 50):
+        ret, frame = cap.read()
+        frames.append(frame)
+
+igen_frames()
 
 #img_file = st.camera_input()
 #if img_file is not None:
