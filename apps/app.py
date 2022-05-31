@@ -26,7 +26,7 @@ while run:
         cap.release()
         break
         
-    FRAME_WINDOW.image(frame, channels="BGR")
+    FRAME_WINDOW.image(frame)
 
 #loaded_model = joblib.load("/app/minimal-streamlit-example/apps/PhysNet_v5.pkl")
 loaded_model = torch.load('/app/minimal-streamlit-example/apps/model_90.pt', encoding='ascii')
