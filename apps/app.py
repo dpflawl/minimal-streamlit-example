@@ -1,27 +1,44 @@
-import streamlit as st
-#from webcam import webcam
-#import cv2
-#from streamlit_webrtc import webrtc_streamer
-import cv2
-#import av #strealing video library
-import numpy as np
-import torch
-
 st.title("얼굴로부터 심박수를 추정하는 심박 모니터링 서비스 Demo 📷💓")
 st.write("👩‍💻 Developed by 지예림") 
 
-run = st.checkbox('모니터링 시작')
-FRAME_WINDOW = st.image([])
-camera = cv2.VideoCapture(-1)
+import streamlit as st
+from threading import Thread
+import cv2
+import time
 
-frames = []
-if camera.isOpened():
-    for i in range(0, 50):
-        ret, frame = camera.read()
-        if frame is not None: 
-            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            FRAME_WINDOW.image(frame)
-            frames.append(frame)
+cap = cv2.VideoCapture(0)
+frameST = st.empty()
+param = st.sidebar.slider('choose your value')
+
+stopper_started = False
+while True:
+    success, frame = cap.read()
+    if not success: break
+
+    frameST.image(frame, channels="BGR")
+    updated_time = time.time()
+
+    if not stopper_started:
+        #this block executes for once with every
+        #streamlit re-run command
+        def stopper(self):
+            while True:
+                try:
+                    #if time difference increases this thread will be terminated
+                    time_diff = round(time.time() - updated_time)
+                    if time_diff >1: #1 second
+                        print("Done processing !!!")
+                        print("Releasing VideoCapture")
+                        #if streamlit ui is stopped
+                        #time gap will increase
+                        #hence releasing camera resource
+                        cap.release()
+                        break
+                except: pass
+        th = Thread(target=stopper, args=(0,))
+        th.daemon = True
+        th.start()
+        stopper_started = True
 
 #img_file = st.camera_input()
 #if img_file is not None:
