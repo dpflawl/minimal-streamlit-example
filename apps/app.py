@@ -22,7 +22,6 @@ while True:
     ret, frame = cap.read()
         
     if not ret:
-        cv2.waitKey(3000)
         cap.release()
         break
     frameST.image(frame, channels="BGR")
