@@ -18,9 +18,6 @@ cap = get_cap()
 
 frameST = st.empty()
 
-if captured_image is None:
-    st.write("Waiting for capture...")
-
 while True:
     ret, frame = cap.read()
         
