@@ -10,12 +10,18 @@ import torch
 st.title("얼굴로부터 심박수를 추정하는 심박 모니터링 서비스 Demo 📷💓")
 st.write("👩‍💻 Developed by 지예림") 
 
-cap = cv2.VideoCapture(-1) #resolved, correct position
+run = st.checkbox('모니터링 시작')
+FRAME_WINDOW = st.image([])
+camera = cv2.VideoCapture(-1)
 
 frames = []
-for i in range(0, 50):
-    ret, frame = cap.read()
-    frames.append(frame)
+if camera.isOpened():
+    for i in range(0, 50):
+        ret, frame = camera.read()
+        if frame is not None: 
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            FRAME_WINDOW.image(frame)
+            frames.append(frame)
 
 #img_file = st.camera_input()
 #if img_file is not None:
