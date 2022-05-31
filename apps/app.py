@@ -11,7 +11,7 @@ st.title("얼굴로부터 심박수를 추정하는 심박 모니터링 서비�
 st.write("👩‍💻 Developed by 지예림") 
 
 def igen_frames():
-    cap = cv2.VideoCapture(cv2.CAP_V4L2) #resolved, correct position
+    cap = cv2.VideoCapture(0) #resolved, correct position
 
     frames = []
     for i in range(0, 50):
