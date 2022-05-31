@@ -10,12 +10,12 @@ import torch
 st.title("얼굴로부터 심박수를 추정하는 심박 모니터링 서비스 Demo 📷💓")
 st.write("👩‍💻 Developed by 지예림") 
 
+def igen_frames():
+    cap = cv2.VideoCapture(cv2.CAP_V4L2) #resolved, correct position
+
 for i in range(0, 50):
-    cap = cv2.VideoCapture(cv2.CAP_V4L2)
-    is_camera = cap.isOpened()
-    if is_camera:
-        st.write(f"Input {i} is a valid camera value for VIDEO_SOURCE")
-        cap.release()
+    ret, frame = cap.read()
+	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 #img_file = st.camera_input()
 #if img_file is not None:
