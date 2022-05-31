@@ -22,7 +22,7 @@ FRAME_WINDOW = st.image([])
 
 while run:
     ret, frame = cap.read()      
-    if not ret:
+    if ret:
         cap.release()
         break
         
