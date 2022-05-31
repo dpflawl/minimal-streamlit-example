@@ -12,7 +12,7 @@ st.write("👩‍💻 Developed by 지예림")
 
 @st.cache(allow_output_mutation=True)
 def get_cap():
-        return cv2.VideoCapture(0)
+    return cv2.VideoCapture(0)
 
 cap = get_cap()
 
