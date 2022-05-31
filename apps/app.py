@@ -45,4 +45,4 @@ while True:
 #    st.image(img_file)
 
 #loaded_model = joblib.load("/app/minimal-streamlit-example/apps/PhysNet_v5.pkl")
-loaded_model = torch.load('/app/minimal-streamlit-example/apps/model_90.pt', encoding='ascii')
+#loaded_model = torch.load('/app/minimal-streamlit-example/apps/model_90.pt', encoding='ascii')
